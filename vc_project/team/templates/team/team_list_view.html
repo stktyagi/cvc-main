@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'team/css/team.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="page-heading">Our Team</h1>
+<!--
+<a href="{% url 'add_team_member' %}" class="add-item-icon"><i class="fas fa-plus-circle icons"></i></a>
+-->
+<div class="container">
+    <div class="row profile-row">
+        {% for member in team %}
+            <div class="profile-container">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 profile-image-container">
+                    <a href="{{ member.link }}">
+                        <img src="{{ member.image.url }}">
+                    </a>
+                </div>
+                <div class="profile-title">
+                    <h3>{{ member.name }}</h3>
+                    <p class="team-title">{{ member.title }}</p>
+                </div>
+                <!--
+                <div class="portfolio-manager-btns-container pt-2">
+                    <a href="{% url 'edit_team_member' member.pk %}" class="mr-5"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'delete_team_member' member.pk %}"><i class="fas fa-trash-alt"></i></a>
+                </div>
+                -->
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="text-container">
+            <h2>Fellows</h2>
+            <p>
+                The next fellowship admissions will begin in January 2024. Fellows can remain with the firm, they do not have to reapply year on year.
+            </p>
+            <p>
+                Apply for a fellowship via email to collective@collective.vc. 
+            </p>
+            <p>
+                Use the subject line “Fellowship Application *Your Name*” or your application will not be considered. 
+            </p>
+            <p>
+                There is no recommended format, as we want you to pitch yourself however you see fit. We do however ask that you write a biography and a photograph suitable for our website and social media along with your application, and specify which fellowship category you are applying for.
+            </p>
+            <p>
+                Fellowships are crucial to our operation. Currently, fellowships are offered in the following categories: Technology, Science, Healthcare, Sustainability, Empowerment, Infrastructure, Development and Finance. Fellowships are currently unpaid, similar to an internship, but this will be under constant review as the company develops in order to incentivise and attract high-quality talent, as well as compensate fellows for their input. 
+                Fellows can progress to partners after demonstrating a strong track record of investment selection, subject specific advice, and respective investment performance.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-container">
+            <h3>Governance Structure</h3>
+            <p>
+                We embed a democratic voting system into every aspect of our operations. Please contact us at collective@collective.vc to schedule a call to discuss the governance structure of the collective.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

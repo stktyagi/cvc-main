@@ -1,0 +1,17 @@
+.company-logo img {
+    object-fit: contain;
+    width: 225px;
+    height: 225px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+    margin-top: 10%;
+    transition: .3s ease-in-out;
+}
+
+.company-logo img:hover {
+	transform: scale(1.1);
+    transition: .3s ease;
+
+}
+

@@ -1,0 +1,28 @@
+.profile-row {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.profile-image-container img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: .3s ease-in-out;
+}
+
+.profile-image-container img:hover {
+	transform: scale(1.03);
+    transition: .3s ease;
+}
+
+.team-title {
+    color: #c69e70;
+    font-size: 1em;
+    font-weight: bold;
+}

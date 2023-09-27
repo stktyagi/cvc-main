@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="page-heading">Portfolio</h1>
+
+<!--
+<a href="{% url 'add_portfolio_item' %}" class="add-item-icon"><i class="fas fa-plus-circle icons"></i></a>
+-->
+<div class="container">
+    <div class="row">
+        {% for item in portfolio %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <a href="{{ item.link }}">
+                    <div class="company-logo">
+                         <img src="{{ item.image.url }}">
+                    </div>
+                </a>
+                <!--
+                <div class="portfolio-manager-btns-container pt-2">
+                    <a href="{% url 'edit_portfolio' item.pk %}" class="mr-5"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'delete_portfolio' item.pk %}"><i class="fas fa-trash-alt"></i></a>
+                </div>
+                -->
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

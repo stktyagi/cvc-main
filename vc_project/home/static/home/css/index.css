@@ -1,0 +1,70 @@
+/* Hero container */
+/* Define the gradient background */
+.hero-container {
+    position: relative;
+    background: #778899;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    padding-top: 150px;
+}
+
+.gradient span {
+    position: relative;
+}
+  
+.hero-container:before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, white, transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+  
+.hero-container:hover:before {
+    --size: 200px;
+}
+  
+
+.hero-container .row {
+    margin-left: 10%;
+    padding-top: 2%;
+}
+
+.hero-heading {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    float: left;
+}
+
+.hero-btn {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:600;
+    color:#FFFFFF;
+    text-align: left;
+    transition: all 0.2s;
+    float: left;
+}
+
+.hero-btn:hover{
+    color:#FFFFFF;
+    background-color:#c69e70;
+    border:0.1em solid #c69e70;
+    text-decoration:none;
+}

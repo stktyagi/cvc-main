@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="page-heading">Pitches</h1>
+
+<div class="container">
+    <div class="row">
+        {% for pitch in pitchdeck %}
+            <div class="col-12">
+                {{ pitch.company_name }}
+                <a href="media\uploads\50137281M.pdf">Pitch</a>
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="container-fluid hero-container d-none d-md-block">
+        <span class="gradient"></span>
+        <div class="gradient" class="row">
+            <div class="gradient" class="col-7 col-md-6 my-auto">
+                <uL><b><b></b><h1 style="color: #2a4949; font-weight: bold;" class="gradient" class="hero-heading">Collective effort is needed to solve the polycrisis.</h1></b></uL><br><br>
+                <h3><li style="color: #ffffff;" class="gradient">Collective VC is a space and community for VCs to share and receive impactful dealflow.</li></h3><br>
+                <h3><li style="color: #ffffff;" class="gradient">If your startup or fund fosters a positive outcome for humanity, it belongs here.</li></h3><br>
+                <h3><li style="color: #ffffff;" class="gradient">We’re merging a trifecta of impactful founders, investors, and students, providing value to all three parties.</li></h3><br>
+            </div>
+        </div>
+        <div class="gradient" class="row">
+            <div class="col-7 col-md-6 my-auto pitch-d-btn-container">
+                <h4>
+                    <a style=" margin-top: 20px; margin-left: 655px; display: inline;" href="{% url 'pitchdeck' %}" class="hero-btn">Pitch Deck</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector('.hero-container');
+btn.addEventListener('mousemove', e => {
+  let rect = e.target.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  let y = e.clientY - rect.top;
+  btn.style.setProperty('--x', x + 'px');
+  btn.style.setProperty('--y', y + 'px');
+});
+    </script>
+    
+    <div class="text-container">
+        {% for item in home %}
+            <h1 class="text-center">
+                {{ item.title }}
+            </h1>
+            <div class="row">
+                <div class="col-4 d-none d-lg-block">
+                    <img src="{{ item.image_section_one.url }}" class = "img-responsive" width = "100%">
+                </div>
+                <div class="col-12 col-lg-8">
+                    <p>
+                        {{ item.content_section_one|safe }}
+                    </p>
+                </div>
+                <p>
+                    {{ item.content|safe }}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

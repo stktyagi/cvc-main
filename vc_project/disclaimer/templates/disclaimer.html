@@ -1,0 +1,194 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
+        {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Collective VC {% block extra_title %}{% endblock %}</title>
+
+</head>
+  <body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg container-fluid">
+            <div class="col-10 col-lg-3 my-auto py-1 py-lg-0">
+                <a href="{% url 'home' %}" class="site-logo">
+                    <img src="{% static 'images\site-logo-test.png' %}">
+                </a>
+            </div>
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-2 col-lg-6" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}">Our Team</a>
+                    </li>
+                </ul>
+                <div class="col-12 col-lg-3 d-lg-none p-0">
+                    <a class="site-btn mobile-contact-btn">
+                        Contact
+                    </a>
+                    <a href="{% url 'pitchdeck' %}" class="site-btn mobile-contact-btn">
+                        Pitchdeck
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 d-none d-lg-block my-auto desktop-contact-btn-container">
+                <a href="{% url 'pitchdeck' %}" class="site-btn desktop-contact-btn-gold ">
+                    Pitchdeck
+                </a>
+                <a class="site-btn desktop-contact-btn">
+                    Contact
+                </a>
+            </div>
+          </nav>
+    </header>
+    <div>
+<br></br>
+<h1 style="margin-left: 39%; font-weight: bold;">DISCLAIMER</h1><br>
+
+<br>This Disclaimer was written by the managers of Collective.VC trading as Collective VC Ltd in the UK. Registered Company Number 14226589. Category SIC64303.<br></br>
+<br>
+<h4>Not FCA Regulated:</h4>
+    
+<br>An informal group of companies, that in itself, does not take funds from the public, does not need to be registered with the FCA. The FCA's registration requirements are designed to protect consumers, and they only apply to firms that provide financial services to the public. Our firm does not take funds from the public, offering communicative, events and community-based services only to select venture capital organisations, and therefore it is not considered to be providing financial services, and we do not need to be registered with the FCA.
+
+We are not, and do not require to be, regulated or authorised by the Financial Conduct Authority in the UK or any other consumer protection body. This is because we do not take, manage, accept, invest, or request funds from members of the public. We also do not provide investment services or financial technology products to members of the public in any capacity. These include advice, transfers, remittances, investments, dealings, sourcings, management, overseeing, advice, resolutions, negotiations, purchases, underwriting, issuing, or providing investment products or research.<br>
+</br>
+<br>
+<h4>ACCEPTANCE OF TERMS</h4>
+
+<br>
+By accessing our site, you are deemed to have understood and agree to abide by the ensuing terms of usage. We may modify the website and these terms intermittently to reflect alterations to our enterprise, users' requisites, or offerings. Furthermore, we may suspend or withdraw our site whenever we please, or restrict access to part or all of the site for corporate and operational rationales. It is necessary that you make sure all individuals who access our site via your internet connection are cognizant of these terms and adhere to them.
+
+Where our site links to third-party sites or resources, these connections are provided solely for informational purposes. Such references or links ought not to be misconstrued as our endorsement of the content or information that may be procured or sourced from them. We exercise no authority over the contents of those sites or the information they encapsulate. We do not guarantee the impregnability or freedom from glitches or viruses of our site. The configuration of your information technology, computer programs, and platform to access our site remains your responsibility. It is advisable to employ your own antivirus software for protection. You shall not misuse our site by knowingly introducing malicious software, viruses, logic bombs, trojans, worms, or other material that is malicious or technologically pernicious. You shall not endeavour to procure unauthorised access to our site, the server wherein our site is stored, or any server, computer, or database affiliated with our site.
+
+You shall not assault, attack, or damage our site or its hosting or provision through a denial-of-service attack or a distributed denial-of-service attack. By contravening this stipulation, you would commit a criminal offence in accordance with the Computer Misuse Act 1990. We shall promptly report any such violation to the pertinent law enforcement authorities and shall collaborate with said authorities by divulging your identity to them. In the event of such a breach, your entitlement to utilise our site shall terminate forthwith.<br>
+</br>
+<br>
+<h4>INFORMATION DISCLAIMER</h4>
+
+<br>
+The content on our site is provided for general information only. It is not intended to amount to advice on which you should rely. You must obtain professional or specialist advice before taking, or refraining from, any action on the basis of the content on our site. Although we make reasonable efforts to update the information on our site, we make no representations, warranties or guarantees, whether expressed or implied, that the content on our site is accurate, complete or up to date.<br>
+</br>
+<br>
+<h4>INTELLECTUAL PROPERTY RIGHTS</h4>
+
+<br>
+We hold the ownership or the licence for all intellectual property rights pertaining to our site and the published material within it. These works are safeguarded by copyright laws and international treaties. All rights reserved. You may generate a single printed copy and download excerpts of any page(s) from our site strictly for personal use. Furthermore, you may bring the attention of others within your organisation to the content published on our site. It is imperative that you refrain from modifying the printed or digital copies of any materials you have obtained, and you must not utilise any illustrations, photographs, video or audio sequences, or graphics in isolation from the accompanying text. Our position (as well as that of any identified contributors) as the creators of the content on our site must always be acknowledged. The utilisation of any portion of the content on our site for commercial purposes is prohibited unless you have obtained a licence from us or our licensors. Should you print, copy, or download any part of our site in contravention of these terms of use, your right to access our site will be terminated immediately, and, at our discretion, you must either return or destroy any copies of the materials you have produced.<br></br>
+
+<br>
+<h4>REFERENCING OR DIRECTING OTHERS TO OUR SITE</h4>
+
+<br>
+You are permitted to create a link to our home page, provided that you do so in a manner that is equitable, lawful, and does not tarnish our reputation or exploit it. It is imperative that you refrain from establishing a link in a manner that implies any form of association, approval, or endorsement on our part when none exists. You are prohibited from establishing a link to our site on any website or social media profile that you do not own. Additionally, our site must not be framed within any other site, nor may you establish a link to any section of our site other than the home page. We retain the right to revoke linking permissions without prior notice.<br></br>
+
+<br>
+<h4>DATA YOU CAN CHOOSE TO VOLUNTARILY PROVIDE</h4>
+
+<br>
+We act fully and entirely within the bounds of GDPR and related data privacy and protection laws in any jurisdiction. Ultimately, we only collect what is necessary for our business operation, and which is provided voluntarily by the site user. Users agree to these terms before they submit their emails and PDF files voluntarily.<br></br>
+
+<br>
+<h4>Cookies</h4>
+
+<br>
+We do not use, collect, store, track, provide, keep, sell, or transfer cookies on this website.<br></br>
+
+<br>
+<h4>Emails (Voluntary)</h4>
+
+<br>
+We collect and safely store email addresses that have been provided to us. If you enter your email, you consent to further communications and your addition to our mailing list. We are not liable for catastrophic loss or malicious attack that results in the exposure of your email address. We do everything in our power to prevent this. Emails are stored safely and securely. We apologise if any emails or PDF files on our mailing list are ever compromised, but rest assured, we employ robust security measures to safeguard your information. However, please refrain from uploading highly sensitive, private, important, or crucial material as we cannot and will never assume liability for their protection. No computer security system is completely foolproof.
+PDF Files (Voluntary)
+Users can upload PDF files, commonly known in the VC industry as ‘Pitch Decks’, for review by our team. This is a part of our investment selection process. We are careful to ensure these files are kept safe. We never intend to leak, share, disclose, copy, or distribute your PDF files without your prior consent. We apologise if any emails or PDF files on our mailing list are ever compromised, but we employ robust security measures to safeguard your information. However, please refrain from uploading highly sensitive, private, important, or crucial material as we cannot and will never assume liability for their protection. No computer security system is completely foolproof.<br></br>  
+
+<br>
+<h4>GOVERNING LAW</h4>
+
+<br>
+This legal disclaimer shall be governed by and interpreted in accordance with the laws of England. Any disputes arising in connection with this site or the legal disclaimer shall be subject to the exclusive jurisdiction of the courts of England.<br></br><br></br><br></br><br></br>
+</br>
+    </div>
+
+    {% if messages %}
+        <div class="message-container"></div>
+    {% endif %}
+  
+    {% block page_header %}
+    {% endblock %}
+
+    
+
+    <footer>
+        <div class="footer-row ">
+            <div class="col-12 col-md-4 footer-left">
+                <nav>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="{% url 'portfolio' %}">Porfolio</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Our Team</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="col-12 col-md-4 footer-center">
+                <h4 class="social-header">Follow us on Linkeden</h4>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-linkedin fa-lg social-icon"></i></a></li>
+                  </ul>
+            </div>
+            <div class="col-12 col-md-4 footer-right">
+                <h6>Disclaimer</h6>
+                <ul>
+                    <li class="footer-text">This webpage and its hyperlinks or contents do not constitute investment advice.</li>
+                    <li class="footer-text">do not accept, invest, manage, or request funds from members of the public.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-container">
+    <p class="footer-text">©Copyright {% now "Y"  %} by Collective VC</p>
+    </div>
+
+    {% block postloadjs%}
+    {% endblock %}
+</body>
+</html>

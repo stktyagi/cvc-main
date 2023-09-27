@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="form-container row">
+        <h2 class="form-heading col-12">Delete Item from Portfolio</h2>
+        <form class="col-12 site-form" accept="" method="POST">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ portfolio.title }}" from the portfolio?</p>
+            <input type="submit" value="Confirm" class="form-sub-btn">
+        </form>
+    </div>
+{% endblock %}
