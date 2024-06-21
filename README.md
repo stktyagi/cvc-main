@@ -3,9 +3,8 @@
  Developed by- 
 
  Sarthak Tyagi
-
  Avyukt Soni
 
- Owned by-
 
+ Owned by-
  Oliver Bonallack
