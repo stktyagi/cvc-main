@@ -1,7 +1,6 @@
 # cvc-main
 
  Developed by- 
-
  Sarthak Tyagi
  Avyukt Soni
 
